@@ -6,5 +6,6 @@ RUN apt-get update \
 RUN apt-get update && apt-get install -y git
 COPY ./* ./
 RUN pip install -r requirements.txt
+RUN pip install -U gradio
 
 CMD python app.py --share
