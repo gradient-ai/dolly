@@ -1,4 +1,8 @@
 import gradio as gr
+from transformers import pipeline
+
+instruct_pipeline = pipeline(model="../opt/dsi5inn7aonbmv3/dolly-v2-12b", trust_remote_code=True, device_map="auto")
+
 
 def infer(inp):
     return instruct_pipeline(inp)
